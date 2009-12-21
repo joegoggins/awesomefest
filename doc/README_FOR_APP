@@ -1,2 +1,50 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+== About
+Awesomefest is a web play ground to show some Rails plugins in action starting with:
+* autocompleter_server
+* autocompleter_client
+* weighted_search
+
+Each demonstration of tools is called a round, the app is namespaced R1, R2, etc
+to accomodate new experiments.
+
+== To Run (assumes mysql)
+rake db:create
+rake db:migrate
+rake db:fixtures:load
+script/server
+
+== Goals of Round 1.
+
+Demonstrate weighted search + autocompleters + cool visualizations + clustered results
+on whatever data is easiest to work with and most open.
+
+Brainstorm on awesomefest round 1.
+
+Goal is to build a super awesome autocompleter driven system that powers entire pages with aggregated content from many different sources starting with wikipedia and facebook.
+
+The idea is to have the user fully immersed in various different intelligently clustered suggestions
+with each keystroke typed into the autocompleter.
+
+For example:
+I type "bla" and get the top N results of for "bla" queries done in google, wikipedia, and facebook
+with each entry any thing with temporal information gets rendered with simile timeline,
+anything with geographic information gets rendered spatially on google maps,
+social information gets visualized with moowheel,
+a histogram is built of the word distribution on the target content
+
+a list of incoming links is generated,
+a list of outgoing links is generated
+
+WpDocument
+LoopFile
+ArchiveDisk
+
+User
+
+Group
+
+WeightedSearchScore
+
+
+== Tasks
+I type
