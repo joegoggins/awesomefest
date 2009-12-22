@@ -1,24 +1,5 @@
-== Cluster-ed Weighted Search with Autocompleters Concept
-Clustering by resource type, aka Google Page, Wikipedia page, Facebook profile.
-Weighted by variable weights for each resource type.
-Auto-completion based on weight, and membership to similar groups or sharing other features in common.
+== V2
 
-Suggestions from the auto-completer come in the form of:
-  - Resource Type				
-    - Resource Link and Title   
-      temporal social spacial graphical
-      historical
-    - Resource Link and Title   
-    - Resource Link and Title   
-		...				...		
+== V3
 
-On click of "Resource Type" it just simply goes to that Source directly with the query
-On click of Resource Link it takes you to the page
-On click of temporal
-
-
-
-\simile timeline,
-geographic information gets rendered spatially on google maps,
-social information gets visualized with moowheel,
-a histogram is built of the word distribution on the target content
+== Beyond V3

@@ -1,0 +1,90 @@
+== Cluster-ed Weighted Search with Autocompleters Concept
+Clustering by resource type, aka Google Page, Wikipedia page, Facebook profile.
+Search results weighted by variable weights on the various members for each resource type.
+Auto-completion based on weighted_search scores
+Visualization links shown for data that makes sense.
+
+Assuming user types "birth", suggestions from the auto-completer come in the form of:
+  - Resource Type				
+    - Resource Link and Title (on "birthday")
+      Visualize: 
+    - Resource Link and Title (on "birthday blues")
+    - Resource Link and Title (on "birth")  
+  - Resource Type				
+    - Resource Link and Title (on "ron's birthday")  
+  - Resource Type				
+    - Resource Link and Title (on "birthday calendar")
+      Visualize: social 
+    - Resource Link and Title   
+
+On click of "Resource Type" it just simply goes to that source directly with the query
+or a paginated list of results of only this Resource Type
+
+On click of Resource Link it takes you to the page
+When you press enter you go to the resource
+
+The temporal social spacial graphical links appear if the item has data that would be appropriate 
+to visualize in this way.
+
+Resource Type Visualization ideas for a hypothetical IT organization:
+  - Wiki Page: Incoming Links, Outgoing links, Authors, Tag cloud, Word distribution histogram
+  - Knowledge Base Article
+
+ 
+score
+hits
+created_at
+digs
+tasks 20, pages 11384
+
+== As a <X> I want to <Y> uber-completer
+The user types "financ" and is mid word, they should see.
+MATCHES   	                                               DID YOU MEAN?                       
+ 	- As a "student" I want to                             							
+ 	  TASKS                                                							
+ 	  - Get information about my loans	                   student <b>financ</b>es		
+         ...bla bla bla bla bla bla bla...                 tasks 20, pages 11384          
+                                                           policies 14
+                                                           
+  	   - Find scholarship opportunies                      scholarship and <b>financ</b>es
+                                                           tasks 4, pages 22
+ 	   - Enroll in a class                                 							
+ 	  PAGES                                                	                           
+ 	  - Information about the Degree in advanced finance   	                           
+                                                 	                           
+ 	- As an "employee" I want to                           							
+ 	  TASKS                                                							
+ 	  - Check my direct deposit information                							
+                                                           							
+ 	- As an "ASR employee" I want                          							
+                                                           					           
+ 	- 				                                       							
+   - Resource Link and Title (on "ron's birthday")         							
+ - Resource Type				                           							
+   - Resource Link and Title (on "birthday calendar")      							
+     Visualize: social                                     							
+   - Resource Link and Title                               							
+
+Example Vizualizations on onestop
+
+Resource Types:
+
+Common Task
+-primary group
+-link to solution
+or
+-links to solution
+or
+-
+undergrad student tasks
+staff tasks
+departmental tasks
+
+
+
+
+
+simile timeline,
+geographic information gets rendered spatially on google maps,
+social information gets visualized with moowheel,
+a histogram is built of the word distribution on the target content
