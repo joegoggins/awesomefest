@@ -1,0 +1,8 @@
+Description:
+    Puts the AutocompleterClient initializer in place.
+
+Example:
+    ./script/generate autocompleter_client
+
+    This will create:
+        config/intializers/autocompleter_client.rb

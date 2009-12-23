@@ -1,0 +1,13 @@
+<h1>Simple document autocompleter</h1>		
+<% form_tag do %>
+<a id="v1_documentAnchor"></a>
+<% javascript_tag do %>
+var autoCompleter1= new UmnEngine.V1DocumentAutocompleter('v1_document', '/v1/documents/autocompleter_submit', $H({"maxSelections":1}));
+<% end %>
+
+<% end %>
+
+<h1>Broken one with autocompleter_client plugin f-that</h1>
+<% form_tag do %>
+<%= v1_document_autocompleter 'v1_documentAutomatic' %>
+<% end %>

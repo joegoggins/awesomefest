@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  created_by_user_id: 1
+  owned_by_user_id: 1
+  title: donkey
+  keywords: animal hairy mule ass
+  questions: What is grey and hike moutrons?
+  description: This animal hauls mauls drools and drawls.
+  body: Here is where I talk about linking to a sweet donkey picture.
+
+two:
+  created_by_user_id: 1
+  owned_by_user_id: 1
+  title: kitty
+  keywords: little bitty weasel face guy
+  questions: What is orange and white and kinda nice?
+  description: My cat is rather tiiiiiight
+  body: Here is where I talk about my kitty

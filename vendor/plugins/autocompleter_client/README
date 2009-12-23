@@ -1,0 +1,112 @@
+AutocompleterClient
+==============
+
+Goals
+======
+ - To provide a simple configuration that yields access to the versioned UMNEngine (engine.cla.umn.edu) Models [By Default]
+   or any other installation of the AutocompleterServer plugin.
+
+Specs
+======
+  Config:
+    - Specify Account Information (user/pass)
+    - Specify API Version for
+    - Specify which Resources To Make AutoCompleters for
+    - Custom CSS File for Individual Autocompleter
+    - Custom JS File for Individual Autocompleter
+
+Config
+=======
+
+AutocompleterClient.config do |config|
+
+  config.account = {"username" => "password"}
+  
+  config.version = 2
+  
+  # allows for multiple instances of an auto_completer for the same model
+  # Does NOT allow for multiple instances of an autocompleter for different versions
+  config.resource ClaPerson, :name => :rt_cla_person, :css => "rt_cla_person.css", :js => "rt_cla_person.js"
+  config.resource ClaPerson
+  
+  config.resource ClaUnit
+end
+
+== Resources ==
+
+config.resource can take:
+  -site
+     Can point to some other site, beside the base site. 
+     Begin with "/" to infer that it is a local autocompleter. This will avoid proxy calls, but will rather keep things local (Bypass proxy).
+
+  -js
+     The name of an extending js file. (This is an additive property, it does not replace the base include.)
+
+  -css
+     The name of an extending css file. (This is an additive property, it does not replace the base include.)
+
+  -name
+     The name of the autocompleter, useful for multiple autocompleters on one model.
+     Note: When setting the name, the js_class (For example UmnEngine.ClaPersonAutocompleter), is derived from this resource_name, if :js => nil.
+           Therefore be sure to set :js and :css to "" if you do not want the name of the Autocompleter class derived from this value.
+
+  -default_options
+     The default options passed to the autocompleter (SEE BELOW for available options.)
+     This option is useful when the js customization is small enough to not warrant another file. 
+     Bigger customizations should consider using an extending file.
+
+
+
+== Views ==
+## Can also pass in options hash as 2nd parameter, which will get to_json'ed and passed to the Javascript Class doing the auto_completion
+
+YOU MUST INCLUDE PROTOTYPE AND SCRIPTACULOUS IN YOUR HTML
+<%= autocompleter_client_includes %>
+
+<%= cla_person_auto_completer %>
+  #=> comes across as cla_person_id
+  
+<%= rt_cla_person_auto_completer %>
+  #=> comes across as rt_cla_person_id or as customized by rt_cla_person.js
+  
+<%= cla_people_auto_completer %>
+  #=> comes across as cla_people_ids
+
+<%= cla_unit_auto_completer(:consulting_unit_id, {:initialSelections => [23]}) %>
+  #=> comes across as consulting_unit_id
+
+=== Configurable Options for Autocompleters ===
+As of UMNEngine V1:
+
+  -- Init --
+  :initialSelections         => Array of unique ids to initially populate the Autocompleter Selections with.
+  :maxSelections             => Number of selections to allow.
+ 
+  -- Callbacks --
+  :onCustomSubmit            => Called when submission is being constructed. (Example: email submission in RT)
+  :onParameterConstruction   => Called whenever parameters are being constructed for ajax query. (Example: constrained querys)
+  
+  -- Server side overrides (At the instance level) --
+  :uniqColumnName            => Change the uniq column name for this instance.
+  :columnsToShow             => Change the columns to show for this instance.
+  :maxResults                => Change the maximum results for the choices for this instance.
+
+  -- DOM element ovverides --             DEFUALTS  
+  :selectionRemoveClassName               => 'selectionRemove'
+  :customChoiceClassName                  => 'customChoice'
+  :anchorName                             =>  this.name + "Anchor"
+
+  -- Display overrides --
+  :selectionRemoveLabel                   => 'remove'
+  :selectionTemplateString                =>  null
+  :choiceTemplateString                   =>  null
+  :customChoiceTemplateString             =>  null
+  :selectionAddColumnsToShowToContainer   =>  this.selectionAddColumnsToShowToContainer
+  :selectionAddCustomChoiceToContainer    =>  this.selectionAddCustomChoiceToContainer
+  :choiceAddColumnsToShowToContainer      =>  this.choiceAddColumnsToShowToContainer
+  :customChoiceAddToContainer             =>  this.customChoiceAddToContainer
+  :customChoiceDisplayTextCallback        =>  this.customChoiceDisplayTextCallback
+  :customChoiceSubmitTextCallback         =>  this.customChoiceSubmitTextCallback
+  :inputFieldValueCallback                =>  this.inputFieldValueCallback
+
+Copyright (c) 2009 University of Minnesota, All Rights Reserved

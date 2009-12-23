@@ -1,0 +1,108 @@
+/* CSS STUBS */
+
+.umneContainer {
+  font-family:Verdana,Arial,Helvetica,sans-serif;
+  font-size:11px;
+}
+
+.umneTextField {
+}
+
+.umneChoices {
+  background-color:white;
+  border:1px solid #888888;
+  margin:0;
+  padding:0;
+}
+
+.umneChoices ul {
+background-color:white;
+border:1px solid #888888;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.umneChoices ul ul{
+background-color:white;
+border: none;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.umneChoices ul li {
+margin:0;
+padding: 0;
+}
+
+.umneChoices ul ul li {
+margin: 0;
+padding: 3px;
+}
+
+.umneChoices ul li.selected {
+background:#0066FF none repeat scroll 0 0;
+color:#FFFFFF;
+}
+
+.umneChoices li.selected li {
+background:#0066FF none repeat scroll 0 0;
+color:#FFFFFF;
+}
+
+div.umneChoices .selected {
+background:#FFFF66 none repeat scroll 0 0;
+border:1px solid #FFCC33;
+margin: 0;
+padding: 0;
+}
+
+.umneLoadingIndicator {
+}
+
+.umneChoices li.selected { 
+  background-color: #ffb;
+  display: block;
+}
+
+.umneChoices li {
+  cursor:pointer;
+  display: block;
+}
+
+.umneChoices li li{
+  cursor:pointer;
+  display: block;
+}
+
+.umneSelections ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0 4px 4px;
+padding:6px;
+}
+
+.umneSelections ul ul {
+margin: 0;
+padding: 0; 
+}
+
+div.umneSelections .selectionRemove {
+float:left;
+margin:-1.75em 0 0 212px;
+}
+
+.umneSelections {
+}
+
+.umneSelections li {
+}
+
+.umneSelections li li {
+}

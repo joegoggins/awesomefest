@@ -1,0 +1,38 @@
+<p>
+  <b>Created by user:</b>
+  <%=h @document.created_by_user_id %>
+</p>
+
+<p>
+  <b>Owned by user:</b>
+  <%=h @document.owned_by_user_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @document.title %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%=h @document.keywords %>
+</p>
+
+<p>
+  <b>Questions:</b>
+  <%=h @document.questions %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @document.description %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @document.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>
