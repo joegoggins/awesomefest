@@ -11,3 +11,22 @@ var autoCompleter1= new UmnEngine.V1DocumentAutocompleter('v1_document', '/v1/do
 <% form_tag do %>
 <%= v1_document_autocompleter 'v1_documentAutomatic' %>
 <% end %>
+
+<hr />
+<h1>Auto-completer Proof of Concept 1 with jQuery</h1>
+<% content_for :jqPoc1 do %>
+$j(document).ready(function(){
+  	$j.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?",
+	        function(data){
+	          $j.each(data.items, function(i,item){
+	            $j("<img/>").attr("src", item.media.m).appendTo("#images");
+	            if ( i == 3 ) return false;
+	          });
+	        });
+
+});
+
+<% end %>
+
+<div>
+	thing</div>

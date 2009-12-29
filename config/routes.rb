@@ -2,8 +2,9 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :v1 do |v1|
     v1.resources :users
     v1.resources :documents    
+    
   end
-
+  map.connect ':action', :controller => 'v1/main'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
