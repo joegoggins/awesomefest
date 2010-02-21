@@ -1,11 +1,11 @@
 == About
-Awesomefest is Joe's web playground for some plugins he's workin on open sourcing.
+Awesomefest is a mostly dead playground for monkeying with some old school plugins I helped write.
 * autocompleter_server
 * autocompleter_client
 * weighted_search
 
-Everything in the app is namespaced with a V1, V2, etc to keep different experiments
-separate from one another.
+If you're looking for downloadable plugins ready for action, this is not the place, it's just a playground.
+
 
 == Install
 Assuming you have MySQL running on localhost with a user "root" with no password
